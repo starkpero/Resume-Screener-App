@@ -31,7 +31,7 @@ config = load_config()
 cors_origins = [origin.strip() for origin in settings.cors_origins.split(",") if origin.strip()]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=cors_origins or ["http://localhost:5173"],
+    allow_origins=cors_origins or ["http://localhost:5173"] or ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
