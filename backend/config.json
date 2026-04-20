@@ -1,0 +1,17 @@
+{
+  "sender_email": "anishgupta0066@gmail.com",
+  "match_threshold": 70,
+  "scoring_weights": {
+    "technical_skills": 0.7,
+    "experience_years": 0.2,
+    "seniority_alignment": 0.1
+  },
+  "request_limits": {
+    "analysis_requests_per_user": 2,
+    "window_hours": 24
+  },
+  "email_templates": {
+    "subject_template": "Next Steps for [Job_Title] position",
+    "body_template": "Hi [Name],\n\nWe loved your profile and think you may be a strong fit for this role. Based on our review, we would like to continue the conversation.\n\nBest,\nRecruiting Team"
+  }
+}
