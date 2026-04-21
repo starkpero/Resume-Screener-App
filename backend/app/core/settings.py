@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     openai_api_key: str
     openai_model: str = "gpt-4o-mini"
     sendgrid_api_key: str
-    cors_origins: str = "http://localhost:5173"
+    cors_origins: str = "http://localhost:5173,https://resume-screener-app-steel.vercel.app"
     chroma_dir: str = "./chroma_db"
     config_path: str = "config.json"
 
