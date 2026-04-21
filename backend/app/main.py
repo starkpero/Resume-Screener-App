@@ -29,9 +29,11 @@ app = FastAPI(title="Recruiter Co-Pilot API", version="1.0.0")
 settings = get_settings()
 config = load_config()
 cors_origins = [origin.strip() for origin in settings.cors_origins.split(",") if origin.strip()]
+# Use provided origins, or allow all origins if empty (for development/debugging)
+allow_origins = cors_origins if cors_origins else ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=cors_origins or ["http://localhost:5173"] or ["*"],
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
